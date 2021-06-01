@@ -38,7 +38,7 @@ const Home = (): JSX.Element => {
             const response = await api.get<Product[]>('products');
             return response.data.map(product => ({
                 ...product,
-                priceFormatted: formatPrice(product.price)
+                priceFormatted: formatPrice(product.price),
             }))
         }
 
